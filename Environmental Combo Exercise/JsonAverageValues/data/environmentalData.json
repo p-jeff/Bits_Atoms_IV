@@ -1,0 +1,474 @@
+[
+  {"timestamp": "18:04:02"},
+
+  {
+   
+  
+
+    "tvoc": 3,
+    "altitude": 329.37,
+    "temp": 26.5,
+    "co2": 426,
+    "humidity": 27,
+    "pressure": 97430.25
+  },
+  {"timestamp": "18:04:07"},
+  {
+    "tvoc": 0,
+    "altitude": 329.16,
+    "temp": 26.5,
+    "co2": 401,
+    "humidity": 27,
+    "pressure": 97432.72
+  },
+  {"timestamp": "18:04:12"},
+  {
+    "tvoc": 1,
+    "altitude": 329.17,
+    "temp": 26.5,
+    "co2": 410,
+    "humidity": 27,
+    "pressure": 97432.66
+  },
+  {"timestamp": "18:04:17"},
+  {
+    "tvoc": 0,
+    "altitude": 329.22,
+    "temp": 26.5,
+    "co2": 403,
+    "humidity": 27,
+    "pressure": 97431.88
+  },
+  {"timestamp": "18:04:22"},
+  {
+    "tvoc": 1,
+    "altitude": 329.43,
+    "temp": 26.5,
+    "co2": 413,
+    "humidity": 27,
+    "pressure": 97429.64
+  },
+  {"timestamp": "18:04:27"},
+  {
+    "tvoc": 1,
+    "altitude": 329.23,
+    "temp": 26.6,
+    "co2": 410,
+    "humidity": 27,
+    "pressure": 97431.95
+  },
+  {"timestamp": "18:04:32"},
+  {
+    "tvoc": 1,
+    "altitude": 329.22,
+    "temp": 26.5,
+    "co2": 413,
+    "humidity": 27,
+    "pressure": 97431.98
+  },
+  {"timestamp": "18:04:37"},
+  {
+    "tvoc": 1,
+    "altitude": 329.49,
+    "temp": 26.5,
+    "co2": 410,
+    "humidity": 27,
+    "pressure": 97428.88
+  },
+  {"timestamp": "18:04:42"},
+  {
+    "tvoc": 3,
+    "altitude": 329.54,
+    "temp": 26.5,
+    "co2": 420,
+    "humidity": 27,
+    "pressure": 97428.3
+  },
+  {"timestamp": "18:04:47"},
+  {
+    "tvoc": 0,
+    "altitude": 329.33,
+    "temp": 26.5,
+    "co2": 400,
+    "humidity": 27,
+    "pressure": 97430.72
+  },
+  {"timestamp": "18:04:52"},
+  {
+    "tvoc": 0,
+    "altitude": 329.44,
+    "temp": 26.5,
+    "co2": 403,
+    "humidity": 27,
+    "pressure": 97429.47
+  },
+  {"timestamp": "18:04:57"},
+  {
+    "tvoc": 3,
+    "altitude": 329.42,
+    "temp": 26.5,
+    "co2": 426,
+    "humidity": 28,
+    "pressure": 97429.71
+  },
+  {"timestamp": "18:05:02"},
+  {
+    "tvoc": 0,
+    "altitude": 329.8,
+    "temp": 26.5,
+    "co2": 401,
+    "humidity": 27,
+    "pressure": 97425.27
+  },
+  {"timestamp": "18:05:07"},
+  {
+    "tvoc": 0,
+    "altitude": 329.79,
+    "temp": 26.5,
+    "co2": 403,
+    "humidity": 27,
+    "pressure": 97425.44
+  },
+  {"timestamp": "18:05:12"},
+  {
+    "tvoc": 3,
+    "altitude": 329.62,
+    "temp": 26.5,
+    "co2": 420,
+    "humidity": 27,
+    "pressure": 97427.38
+  },
+  {"timestamp": "18:05:17"},
+  {
+    "tvoc": 2,
+    "altitude": 329.54,
+    "temp": 26.5,
+    "co2": 417,
+    "humidity": 27,
+    "pressure": 97428.35
+  },
+  {"timestamp": "18:05:22"},
+  {
+    "tvoc": 2,
+    "altitude": 329.38,
+    "temp": 26.5,
+    "co2": 417,
+    "humidity": 27,
+    "pressure": 97430.16
+  },
+  {"timestamp": "18:05:27"},
+  {
+    "tvoc": 3,
+    "altitude": 329.55,
+    "temp": 26.5,
+    "co2": 420,
+    "humidity": 27,
+    "pressure": 97428.17
+  },
+  {"timestamp": "18:05:32"},
+  {
+    "tvoc": 3,
+    "altitude": 329.57,
+    "temp": 26.5,
+    "co2": 420,
+    "humidity": 27,
+    "pressure": 97427.91
+  },
+  {"timestamp": "18:05:37"},
+  {
+    "tvoc": 4,
+    "altitude": 329.7,
+    "temp": 26.5,
+    "co2": 428,
+    "humidity": 27,
+    "pressure": 97426.41
+  },
+  {"timestamp": "18:05:42"},
+  {
+    "tvoc": 3,
+    "altitude": 329.73,
+    "temp": 26.5,
+    "co2": 420,
+    "humidity": 27,
+    "pressure": 97426.11
+  },
+  {"timestamp": "18:05:47"},
+  {
+    "tvoc": 3,
+    "altitude": 329.29,
+    "temp": 26.4,
+    "co2": 424,
+    "humidity": 27,
+    "pressure": 97430.7
+  },
+  {"timestamp": "18:05:52"},
+  {
+    "tvoc": 3,
+    "altitude": 329.36,
+    "temp": 26.4,
+    "co2": 420,
+    "humidity": 27,
+    "pressure": 97430.41
+  },
+  {"timestamp": "18:05:57"},
+  {
+    "tvoc": 1,
+    "altitude": 329.43,
+    "temp": 26.4,
+    "co2": 413,
+    "humidity": 27,
+    "pressure": 97429.58
+  },
+  {"timestamp": "18:06:02"},
+  {
+    "tvoc": 1,
+    "altitude": 329.35,
+    "temp": 26.4,
+    "co2": 410,
+    "humidity": 27,
+    "pressure": 97430.5
+  },
+  {"timestamp": "18:06:07"},
+  {
+    "tvoc": 2,
+    "altitude": 329.08,
+    "temp": 26.4,
+    "co2": 415,
+    "humidity": 27,
+    "pressure": 97433.71
+  },
+  {"timestamp": "18:06:12"},
+  {
+    "tvoc": 1,
+    "altitude": 328.99,
+    "temp": 26.4,
+    "co2": 413,
+    "humidity": 27,
+    "pressure": 97434.67
+  },
+  {"timestamp": "18:06:17"},
+  {
+    "tvoc": 2,
+    "altitude": 328.84,
+    "temp": 26.4,
+    "co2": 415,
+    "humidity": 27,
+    "pressure": 97436.47
+  },
+  {"timestamp": "18:06:22"},
+  {
+    "tvoc": 1,
+    "altitude": 329.15,
+    "temp": 26.4,
+    "co2": 413,
+    "humidity": 26,
+    "pressure": 97432.87
+  },
+  {"timestamp": "18:06:27"},
+  {
+    "tvoc": 3,
+    "altitude": 329.07,
+    "temp": 26.5,
+    "co2": 424,
+    "humidity": 27,
+    "pressure": 97433.83
+  },
+  {"timestamp": "18:06:32"},
+  {
+    "tvoc": 2,
+    "altitude": 329.09,
+    "temp": 26.5,
+    "co2": 415,
+    "humidity": 27,
+    "pressure": 97433.52
+  },
+  {"timestamp": "18:06:37"},
+  {
+    "tvoc": 2,
+    "altitude": 329.33,
+    "temp": 26.5,
+    "co2": 415,
+    "humidity": 27,
+    "pressure": 97430.8
+  },
+  {"timestamp": "18:06:42"},
+  {
+    "tvoc": 4,
+    "altitude": 329.51,
+    "temp": 26.5,
+    "co2": 428,
+    "humidity": 27,
+    "pressure": 97428.61
+  },
+  {"timestamp": "18:06:47"},
+  {
+    "tvoc": 1,
+    "altitude": 329.3,
+    "temp": 26.5,
+    "co2": 410,
+    "humidity": 27,
+    "pressure": 97431.14
+  },
+  {"timestamp": "18:06:52"},
+  {
+    "tvoc": 1,
+    "altitude": 329.45,
+    "temp": 26.5,
+    "co2": 410,
+    "humidity": 27,
+    "pressure": 97429.48
+  },
+  {"timestamp": "18:06:57"},
+  {
+    "tvoc": 1,
+    "altitude": 329.44,
+    "temp": 26.4,
+    "co2": 410,
+    "humidity": 27,
+    "pressure": 97429.5
+  },
+  {"timestamp": "18:07:02"},
+  {
+    "tvoc": 2,
+    "altitude": 329.46,
+    "temp": 26.4,
+    "co2": 415,
+    "humidity": 27,
+    "pressure": 97429.23
+  },
+  {"timestamp": "18:07:07"},
+  {
+    "tvoc": 3,
+    "altitude": 329.7,
+    "temp": 26.4,
+    "co2": 420,
+    "humidity": 27,
+    "pressure": 97426.75
+  },
+  {"timestamp": "18:07:12"},
+  {
+    "tvoc": 0,
+    "altitude": 329.68,
+    "temp": 26.4,
+    "co2": 406,
+    "humidity": 27,
+    "pressure": 97426.63
+  },
+  {"timestamp": "18:07:17"},
+  {
+    "tvoc": 3,
+    "altitude": 329.75,
+    "temp": 26.4,
+    "co2": 420,
+    "humidity": 27,
+    "pressure": 97425.86
+  },
+  {"timestamp": "18:07:22"},
+  {
+    "tvoc": 7,
+    "altitude": 329.59,
+    "temp": 26.5,
+    "co2": 452,
+    "humidity": 27,
+    "pressure": 97427.71
+  },
+  {"timestamp": "18:07:27"},
+  {
+    "tvoc": 12,
+    "altitude": 329.57,
+    "temp": 26.5,
+    "co2": 480,
+    "humidity": 27,
+    "pressure": 97427.93
+  },
+  {"timestamp": "18:07:32"},
+  {
+    "tvoc": 3,
+    "altitude": 329.68,
+    "temp": 26.5,
+    "co2": 424,
+    "humidity": 27,
+    "pressure": 97426.64
+  },
+  {"timestamp": "18:07:37"},
+  {
+    "tvoc": 3,
+    "altitude": 329.8,
+    "temp": 26.5,
+    "co2": 420,
+    "humidity": 27,
+    "pressure": 97425.33
+  },
+  {"timestamp": "18:07:42"},
+  {
+    "tvoc": 7,
+    "altitude": 329.68,
+    "temp": 26.5,
+    "co2": 452,
+    "humidity": 27,
+    "pressure": 97426.68
+  },
+  {"timestamp": "18:07:47"},
+  {
+    "tvoc": 3,
+    "altitude": 329.72,
+    "temp": 26.6,
+    "co2": 424,
+    "humidity": 27,
+    "pressure": 97426.17
+  },
+  {"timestamp": "18:07:52"},
+  {
+    "tvoc": 5,
+    "altitude": 329.66,
+    "temp": 26.6,
+    "co2": 435,
+    "humidity": 27,
+    "pressure": 97426.91
+  },
+  {"timestamp": "18:07:57"},
+  {
+    "tvoc": 74,
+    "altitude": 329.39,
+    "temp": 26.6,
+    "co2": 891,
+    "humidity": 28,
+    "pressure": 97430.03
+  },
+  {"timestamp": "18:08:02"},
+  {
+    "tvoc": 7,
+    "altitude": 329.72,
+    "temp": 26.6,
+    "co2": 448,
+    "humidity": 27,
+    "pressure": 97426.2
+  },
+  {"timestamp": "18:08:07"},
+  {
+    "tvoc": 3,
+    "altitude": 329.9,
+    "temp": 26.7,
+    "co2": 424,
+    "humidity": 27,
+    "pressure": 97424.06
+  },
+  {"timestamp": "18:08:12"},
+  {
+    "tvoc": 5,
+    "altitude": 329.59,
+    "temp": 26.7,
+    "co2": 435,
+    "humidity": 26,
+    "pressure": 97427.67
+  },
+  {"timestamp": "18:08:17"},
+  {
+    "tvoc": 7,
+    "altitude": 329.31,
+    "temp": 26.7,
+    "co2": 450,
+    "humidity": 27,
+    "pressure": 97430.64
+  }
+]
