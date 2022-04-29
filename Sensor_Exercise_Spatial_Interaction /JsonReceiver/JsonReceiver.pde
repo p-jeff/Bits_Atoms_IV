@@ -5,6 +5,7 @@ JSONObject incoming;
 JSONArray values;
 StringList environment;
 int timer;
+String FileName;
 
 void setup() {
   size(500, 500);
@@ -14,6 +15,10 @@ void setup() {
   int portNumber = 1;
   myPort = new Serial(this, Serial.list()[portNumber], 9600);
   values = new JSONArray();
+  int time[]={day(),hour(), minute(), second()};
+  String fileTime = nf(time[0], 2) + "_" + nf(time[1], 2) + "_"+ nf(time[2], 2)+ "_"+ nf(time[3], 2);
+  FileName = "data/environmentalData"+fileTime+".json";
+
 }
 
 void draw() {
@@ -41,7 +46,8 @@ void draw() {
 
     values.setJSONObject(j, incoming);
   }
-  saveJSONArray(values, "data/environmentalData.json");
+
+  saveJSONArray(values, FileName);
   println("saved");
 }
 void serialEvent(Serial myPort) {
