@@ -1,2 +1,2 @@
 # Bits_Atoms_IV
- Coding examples for Spatial Interaction FS22
+ Coding examples for Spatial Interaction Module. 
