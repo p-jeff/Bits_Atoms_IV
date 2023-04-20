@@ -74,6 +74,21 @@ function findColor(input, c, tolerance) {
           g >= matchG-tolerance && g <= matchG+tolerance &&
           b >= matchB-tolerance && b <= matchB+tolerance) {
 
+          //YOUR CODE HERE
+          //push x,y to the array
+
+          //shift the array once the're more than 20 elements. You can experiment
+          //with this value, to see when the smoothing works best
+
+          //sum all x, and y coordinates
+
+
+          //divide x and y by the total amount of elements inside of your array
+          //to get the average coordinate
+    
+
+        
+          //return the averaged x and y
           return [x,y];
         }
       }
