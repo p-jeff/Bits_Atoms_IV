@@ -67,12 +67,6 @@ void loop()
     float BMEtempC = myBME280.readTempC();
     float BMEhumid = myBME280.readFloatHumidity();
 
-    // Comment this to ensure that Processing only read the formatted data
-    //    Serial.print("Applying new values (deg C, %): ");
-    //    Serial.print(BMEtempC);
-    //    Serial.print(",");
-    //    Serial.println(BMEhumid);
-    //    Serial.println();
 
     //This sends the temperature data to the CCS811
     myCCS811.setEnvironmentalData(BMEhumid, BMEtempC);
@@ -82,7 +76,7 @@ void loop()
     Serial.println(myCCS811.getErrorRegister()); //Prints whatever CSS811 error flags are detected
   }
 
-  delay(5000); //Wait for next reading
+  delay(50); //Wait for next reading
 }
 
 //---------------------------------------------------------------
