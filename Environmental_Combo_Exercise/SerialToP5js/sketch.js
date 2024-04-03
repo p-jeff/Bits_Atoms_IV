@@ -3,15 +3,21 @@ let serialOptions = { baudRate: 9600 };
 let serial;
 var connect = false;
 let isConnected = false;
-let serialData = {"co2":400,"tvoc":0,"temp":25.8,"pressure":94262.92,"altitude":605.18,"humidity":22}
+let serialData = {
+  co2: 1300,
+  tvoc: 0,
+  temp: 25.8,
+  pressure: 94262.92,
+  altitude: 605.18,
+  humidity: 22,
+};
 
 function setup() {
-  createCanvas(1300, 700);
-  background(255);
+  createCanvas(windowWidth, windowHeight);
   gui = createGui("");
-  gui.addGlobals('connect');
-
+  gui.addGlobals("connect");
   // Setup Web Serial using serial.js
+  frameRate(10);
   serial = new Serial();
   serial.on(SerialEvents.CONNECTION_OPENED, onSerialConnectionOpened);
   serial.on(SerialEvents.CONNECTION_CLOSED, onSerialConnectionClosed);
@@ -19,27 +25,41 @@ function setup() {
   serial.on(SerialEvents.ERROR_OCCURRED, onSerialErrorOccurred);
   // Add <p> element to provide messages. This is optional.
   msg = createP("");
-
+  colorMode(HSB, 100);
 }
 
 function draw() {
-  background(0);
+
+  
   // simple visualization of the serial data
-  let dataLength = Object.keys(serialData).length;
-  let horizontalSpacing = width/dataLength;
-  push();
-  translate(horizontalSpacing/2, height/2);
-  textAlign(CENTER);
-  for (let propertyName in serialData) {
-    let name = propertyName;
-    let value = serialData[propertyName]
-    value = constrain(value,0,200);
-    fill(255);
-    circle(0, 0, value);
-    text(name + ": " + value, 0, 250);
-    translate(horizontalSpacing,0);
+
+  let name = 'co2';
+  let value = serialData[name] / 3;
+  background(50, 20, 70);
+
+  for (let i = 0; i < value; i++) {
+    let radius = random() * value;
+    let angle = random(PI, 2 * PI);
+    let x = width / 2 + radius * cos(angle);
+    let y = height / 2 + radius * sin(angle);
+
+    // Calculate distance from the center
+    let distanceFromCenter = dist(x, y, width / 2, height / 2);
+    
+    // Calculate Brightness based on distance (closer to the center => brighter)
+    let bright = map(distanceFromCenter, 0, width / 2, 80, 0);
+
+    fill(0, 0, bright); 
+    circle(x, y, random(50, 90));
+    noStroke();
   }
-  pop();
+  textAlign(CENTER, TOP);
+  textFont('Arial', 20); // Change 'Arial' to the font you want to use
+  
+  fill(255);
+  text('CO2' + ": " + serialData[name], width / 2, height / 2 + 100); // Center the text below the cloud
+
+
   checkConnection();
 }
 
@@ -77,7 +97,6 @@ function onSerialConnectionOpened(eventSender) {
   console.log("onSerialConnectionOpened");
   msg.html("Serial connection opened successfully");
 }
-
 
 function onSerialConnectionClosed(eventSender) {
   console.log("onSerialConnectionClosed");
