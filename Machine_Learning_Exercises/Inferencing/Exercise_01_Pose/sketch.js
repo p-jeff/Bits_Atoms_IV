@@ -24,7 +24,7 @@ function modelReady() {
 
 function draw() {
   image(video, 0, 0, width, height);
-
+  console.log(poses);
   // We can call both functions to draw all keypoints and the skeletons
   drawKeypoints();
   drawSkeleton();
@@ -40,7 +40,7 @@ function drawKeypoints() {
       // A keypoint is an object describing a body part (like rightArm or leftShoulder)
       let keypoint = pose.keypoints[j];
       // Only draw an ellipse is the pose probability is bigger than 0.2
-      if (keypoint.score > 0.2) {
+      if (keypoint.score > 0.3) {
         fill(255, 255, 0);
         noStroke();
         ellipse(keypoint.position.x, keypoint.position.y, 10, 10);
@@ -52,7 +52,6 @@ function drawKeypoints() {
 
 // A function to draw the skeletons
 function drawSkeleton() {
-
   // Loop through all the skeletons detected
   for (let i = 0; i < poses.length; i++) {
     let skeleton = poses[i].skeleton;

@@ -21,6 +21,8 @@ const options = {
   inputs: ['r', 'g', 'b'],
   outputs: ['color'],
   debug: true,
+  learningRate: 0.2,
+  hiddenUnits: 16,
 }
 
 // Step 3: initialize your neural network
@@ -52,18 +54,11 @@ nn.train(trainingOptions, finishedTraining);
 
 // Step 7: use the trained model
 function finishedTraining() {
-  const input = {
-    r: 255,
-    g: 0,
-    b: 0
-  }
-  classify(input);
   trainingFinished = true;
 }
 
 // Step 8: make a classification
 function classify(input) {
-
   nn.classify(input, handleResults);
 }
 
@@ -103,17 +98,18 @@ function classifyPixelColor() {
         b: c[2]
       }
       classify(input);
-      drawLabel(nnResults);
+      drawLabel(nnResults, input);
     }
   }
 }
-function drawLabel(result) {
+function drawLabel(result, input) {
   if (result) {
     let offset = 0;
   for (val of result) {
-    offset += 15;
     text(val.label +" :" + val.confidence, mouseX+10, mouseY+offset);
+    offset += 15;
   }
+  text(input.r+" "+input.g+" "+input.b, mouseX+10, mouseY+offset)
   }
 }
 
