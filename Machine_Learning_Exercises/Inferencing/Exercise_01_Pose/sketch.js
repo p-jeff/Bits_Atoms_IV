@@ -1,33 +1,88 @@
 let video;
 let poseNet;
 let poses = [];
+let floatingDots = [];
+let numFloatingDots = 20;
 
 function setup() {
   createCanvas(640, 480);
   video = createCapture(VIDEO);
   video.size(width, height);
 
-  // Create a new poseNet method with a single detection
   poseNet = ml5.poseNet(video, modelReady);
-  // This sets up an event that fills the global variable "poses"
-  // with an array every time new poses are detected
   poseNet.on('pose', function (results) {
     poses = results;
   });
-  // Hide the video element, and just show the canvas
   video.hide();
-}
 
-function modelReady() {
-  console.log('Model Loaded');
+  // Initialize the floating dots at random positions within the canvas
+  for (let i = 0; i < numFloatingDots; i++) {
+    floatingDots.push({
+      x: random(width),
+      y: random(height),
+      diameter: 20,
+      pickedUp: false
+    });
+  }
 }
 
 function draw() {
   image(video, 0, 0, width, height);
-  console.log(poses);
-  // We can call both functions to draw all keypoints and the skeletons
-  drawKeypoints();
-  drawSkeleton();
+
+  // Check if any floating dots are picked up
+  let anyPickedUp = false;
+  for (let i = 0; i < floatingDots.length; i++) {
+    if (floatingDots[i].pickedUp) {
+      anyPickedUp = true;
+      break;
+    }
+  }
+
+  // If none are picked up, render and move all floating dots
+  if (!anyPickedUp) {
+    for (let i = 0; i < floatingDots.length; i++) {
+      let dot = floatingDots[i];
+      fill(255, 0, 0);
+      ellipse(dot.x, dot.y, dot.diameter);
+      dot.x += random(-5, 5);
+      dot.y += random(-5, 5);
+    }
+  }
+
+  // Check if any of the floating dots are close enough to the nose to pick up
+  if (poses.length > 0 && !anyPickedUp) {
+    const nose = poses[0].pose.keypoints[0];
+    for (let i = 0; i < floatingDots.length; i++) {
+      let dot = floatingDots[i];
+      if (dist(nose.position.x, nose.position.y, dot.x, dot.y) < 30) {
+        dot.pickedUp = true;
+      }
+    }
+  }
+
+  // If any floating dot is picked up, render it on the nose
+  if (anyPickedUp) {
+    const nose = poses[0].pose.keypoints[0];
+    for (let i = 0; i < floatingDots.length; i++) {
+      let dot = floatingDots[i];
+      if (dot.pickedUp) {
+        dot.x = nose.position.x;
+        dot.y = nose.position.y;
+        dot.diameter = 50; // Increase dot size when picked up
+        fill(255, 0, 0  )
+        ellipse(dot.x, dot.y, dot.diameter);
+      }
+    }
+  }
+
+  // Draw the keypoints and skeletons
+ // drawKeypoints();
+  //drawSkeleton();
+}
+ 
+
+function modelReady() {
+  console.log('Model Loaded');
 }
 
 // A function to draw ellipses over the detected keypoints
