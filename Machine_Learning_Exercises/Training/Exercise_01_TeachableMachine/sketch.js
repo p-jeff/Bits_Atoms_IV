@@ -17,16 +17,15 @@ function setup() {
   textAlign(CENTER, CENTER);
   fill(255,255,0);
   textSize(14);
-
   video = createCapture(VIDEO)
   video.size(video.width, video.height);
   video.hide();
   cropedVideo = createGraphics(video.height, video.height)
   cropedVideo.background(0);
   classifyVideo();
-
-
 }
+
+
 
 function draw() {
   background(100);
@@ -41,7 +40,7 @@ function classifyVideo() {
   flippedVideo = ml5.flipImage(video)
   try {
     // crop the image to match the format of teachablemachine
-   let xOffest = (flippedVideo.width - flippedVideo.height) / 2;
+    let xOffest = (flippedVideo.width - flippedVideo.height) / 2;
     cropedVideo.image(flippedVideo, -xOffest, 0, flippedVideo.width, flippedVideo.height);
     // classify image
     classifier.classify(cropedVideo, gotResults);
