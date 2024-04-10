@@ -5,7 +5,7 @@ let classifier;
 
 //change this to your model
 // train a new model here: https://teachablemachine.withgoogle.com/
-let modelURL = "https://teachablemachine.withgoogle.com/models/sGZNp9fpC/"
+let modelURL = "https://teachablemachine.withgoogle.com/models/7SOckEfnK/"
 let cropedVideo;
 
 function preload() {
@@ -23,7 +23,6 @@ function setup() {
   video.hide();
   cropedVideo = createGraphics(video.height, video.height)
   cropedVideo.background(0);
-
   classifyVideo();
 
 
@@ -40,12 +39,11 @@ function draw() {
 function classifyVideo() {
   let flippedVideo;
   flippedVideo = ml5.flipImage(video)
-  //flippedVideo.remove(); 
   try {
     // crop the image to match the format of teachablemachine
    let xOffest = (flippedVideo.width - flippedVideo.height) / 2;
     cropedVideo.image(flippedVideo, -xOffest, 0, flippedVideo.width, flippedVideo.height);
-    // clasify image
+    // classify image
     classifier.classify(cropedVideo, gotResults);
   } catch (e) {
     console.log(e);
