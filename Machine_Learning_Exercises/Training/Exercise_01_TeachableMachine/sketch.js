@@ -2,10 +2,12 @@ let video;
 let label = " ";
 let confidence = 0.0;
 let classifier;
+let x = 0;
+let y = 200;
 
 //change this to your model
 // train a new model here: https://teachablemachine.withgoogle.com/
-let modelURL = "https://teachablemachine.withgoogle.com/models/7SOckEfnK/"
+let modelURL = "https://teachablemachine.withgoogle.com/models/nUPPNMXV4/"
 let cropedVideo;
 
 function preload() {
@@ -33,7 +35,15 @@ function draw() {
   image(cropedVideo, 0, 0);
   //show label for prediction with highest probability
   text(label + " " + confidence + "%", cropedVideo.width/2, cropedVideo.height + 20);
+
+  if(label == "Hat On"){
+    x++;
+  } else if (label == "Hat Off"){
+    x--;
+  }
+  rect(x,y, 100, 100)
 }
+
 
 function classifyVideo() {
   let flippedVideo;
