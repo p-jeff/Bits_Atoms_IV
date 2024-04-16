@@ -1,0 +1,532 @@
+[
+  {
+    "co2": 463,
+    "tvoc": 9,
+    "temp": 27.6,
+    "pressure": 96476.05,
+    "altitude": 411.69,
+    "humidity": 21,
+    "timeStamp": 11863,
+    "label": "desk"
+  },
+  {
+    "co2": 466,
+    "tvoc": 10,
+    "temp": 27.6,
+    "pressure": 96474.19,
+    "altitude": 411.85,
+    "humidity": 22,
+    "timeStamp": 12064,
+    "label": "desk"
+  },
+  {
+    "co2": 455,
+    "tvoc": 8,
+    "temp": 27.6,
+    "pressure": 96473.63,
+    "altitude": 411.9,
+    "humidity": 22,
+    "timeStamp": 13081,
+    "label": "desk"
+  },
+  {
+    "co2": 455,
+    "tvoc": 8,
+    "temp": 27.5,
+    "pressure": 96473.86,
+    "altitude": 411.9,
+    "humidity": 22,
+    "timeStamp": 14047,
+    "label": "desk"
+  },
+  {
+    "co2": 463,
+    "tvoc": 9,
+    "temp": 27.5,
+    "pressure": 96474.73,
+    "altitude": 411.8,
+    "humidity": 22,
+    "timeStamp": 15064,
+    "label": "desk"
+  },
+  {
+    "co2": 451,
+    "tvoc": 7,
+    "temp": 27.5,
+    "pressure": 96473.23,
+    "altitude": 411.94,
+    "humidity": 22,
+    "timeStamp": 16047,
+    "label": "desk"
+  },
+  {
+    "co2": 451,
+    "tvoc": 7,
+    "temp": 27.5,
+    "pressure": 96476.13,
+    "altitude": 411.68,
+    "humidity": 22,
+    "timeStamp": 17014,
+    "label": "desk"
+  },
+  {
+    "co2": 441,
+    "tvoc": 6,
+    "temp": 27.5,
+    "pressure": 96478.23,
+    "altitude": 411.5,
+    "humidity": 22,
+    "timeStamp": 18031,
+    "label": "desk"
+  },
+  {
+    "co2": 451,
+    "tvoc": 7,
+    "temp": 27.4,
+    "pressure": 96477.8,
+    "altitude": 411.54,
+    "humidity": 22,
+    "timeStamp": 18997,
+    "label": "desk"
+  },
+  {
+    "co2": 463,
+    "tvoc": 9,
+    "temp": 27.4,
+    "pressure": 96476.8,
+    "altitude": 411.63,
+    "humidity": 22,
+    "timeStamp": 20031,
+    "label": "desk"
+  },
+  {
+    "co2": 463,
+    "tvoc": 9,
+    "temp": 27.4,
+    "pressure": 96477.95,
+    "altitude": 411.53,
+    "humidity": 22,
+    "timeStamp": 20997,
+    "label": "desk"
+  },
+  {
+    "co2": 451,
+    "tvoc": 7,
+    "temp": 27.4,
+    "pressure": 96480.33,
+    "altitude": 411.32,
+    "humidity": 22,
+    "timeStamp": 22015,
+    "label": "desk"
+  },
+  {
+    "co2": 451,
+    "tvoc": 7,
+    "temp": 27.4,
+    "pressure": 96479.17,
+    "altitude": 411.42,
+    "humidity": 22,
+    "timeStamp": 22981,
+    "label": "desk"
+  },
+  {
+    "co2": 451,
+    "tvoc": 7,
+    "temp": 27.4,
+    "pressure": 96479.23,
+    "altitude": 411.41,
+    "humidity": 22,
+    "timeStamp": 23965,
+    "label": "desk"
+  },
+  {
+    "co2": 457,
+    "tvoc": 8,
+    "temp": 27.4,
+    "pressure": 96477.19,
+    "altitude": 411.59,
+    "humidity": 21,
+    "timeStamp": 24980,
+    "label": "desk"
+  },
+  {
+    "co2": 457,
+    "tvoc": 8,
+    "temp": 27.3,
+    "pressure": 96476.69,
+    "altitude": 411.64,
+    "humidity": 22,
+    "timeStamp": 25948,
+    "label": "desk"
+  },
+  {
+    "co2": 451,
+    "tvoc": 7,
+    "temp": 27.3,
+    "pressure": 96476.81,
+    "altitude": 411.64,
+    "humidity": 22,
+    "timeStamp": 26965,
+    "label": "desk"
+  },
+  {
+    "co2": 445,
+    "tvoc": 6,
+    "temp": 27.3,
+    "pressure": 96475.61,
+    "altitude": 411.73,
+    "humidity": 22,
+    "timeStamp": 27949,
+    "label": "desk"
+  },
+  {
+    "co2": 445,
+    "tvoc": 6,
+    "temp": 27.3,
+    "pressure": 96475.37,
+    "altitude": 411.75,
+    "humidity": 22,
+    "timeStamp": 28965,
+    "label": "desk"
+  },
+  {
+    "co2": 451,
+    "tvoc": 7,
+    "temp": 27.3,
+    "pressure": 96475.37,
+    "altitude": 411.75,
+    "humidity": 22,
+    "timeStamp": 29932,
+    "label": "desk"
+  },
+  {
+    "co2": 451,
+    "tvoc": 7,
+    "temp": 27.3,
+    "pressure": 96475.39,
+    "altitude": 411.75,
+    "humidity": 22,
+    "timeStamp": 30899,
+    "label": "desk"
+  },
+  {
+    "co2": 451,
+    "tvoc": 7,
+    "temp": 27.3,
+    "pressure": 96476.53,
+    "altitude": 411.65,
+    "humidity": 22,
+    "timeStamp": 31916,
+    "label": "desk"
+  },
+  {
+    "co2": 445,
+    "tvoc": 6,
+    "temp": 27.3,
+    "pressure": 96475.51,
+    "altitude": 411.74,
+    "humidity": 22,
+    "timeStamp": 32898,
+    "label": "desk"
+  },
+  {
+    "co2": 451,
+    "tvoc": 7,
+    "temp": 27.2,
+    "pressure": 96472.63,
+    "altitude": 411.99,
+    "humidity": 22,
+    "timeStamp": 33916,
+    "label": "desk"
+  },
+  {
+    "co2": 482,
+    "tvoc": 12,
+    "temp": 27.2,
+    "pressure": 96476.18,
+    "altitude": 411.68,
+    "humidity": 22,
+    "timeStamp": 34881,
+    "label": "desk"
+  },
+  {
+    "co2": 470,
+    "tvoc": 10,
+    "temp": 27.2,
+    "pressure": 96478.08,
+    "altitude": 411.52,
+    "humidity": 22,
+    "timeStamp": 35849,
+    "label": "desk"
+  },
+  {
+    "co2": 482,
+    "tvoc": 12,
+    "temp": 27.2,
+    "pressure": 96478.7,
+    "altitude": 411.46,
+    "humidity": 22,
+    "timeStamp": 36882,
+    "label": "desk"
+  },
+  {
+    "co2": 482,
+    "tvoc": 12,
+    "temp": 27.2,
+    "pressure": 96478.83,
+    "altitude": 411.45,
+    "humidity": 22,
+    "timeStamp": 37849,
+    "label": "desk"
+  },
+  {
+    "co2": 491,
+    "tvoc": 13,
+    "temp": 27.3,
+    "pressure": 96474.44,
+    "altitude": 411.89,
+    "humidity": 22,
+    "timeStamp": 48165,
+    "label": "macbook"
+  },
+  {
+    "co2": 498,
+    "tvoc": 14,
+    "temp": 27.4,
+    "pressure": 96475.59,
+    "altitude": 411.73,
+    "humidity": 22,
+    "timeStamp": 48783,
+    "label": "macbook"
+  },
+  {
+    "co2": 506,
+    "tvoc": 16,
+    "temp": 27.4,
+    "pressure": 96472.87,
+    "altitude": 411.97,
+    "humidity": 22,
+    "timeStamp": 49750,
+    "label": "macbook"
+  },
+  {
+    "co2": 506,
+    "tvoc": 16,
+    "temp": 27.4,
+    "pressure": 96469.89,
+    "altitude": 412.22,
+    "humidity": 22,
+    "timeStamp": 50767,
+    "label": "macbook"
+  },
+  {
+    "co2": 524,
+    "tvoc": 18,
+    "temp": 27.5,
+    "pressure": 96471.09,
+    "altitude": 412.12,
+    "humidity": 22,
+    "timeStamp": 51732,
+    "label": "macbook"
+  },
+  {
+    "co2": 524,
+    "tvoc": 18,
+    "temp": 27.7,
+    "pressure": 96473.55,
+    "altitude": 411.91,
+    "humidity": 22,
+    "timeStamp": 52767,
+    "label": "macbook"
+  },
+  {
+    "co2": 524,
+    "tvoc": 18,
+    "temp": 27.7,
+    "pressure": 96475.2,
+    "altitude": 411.76,
+    "humidity": 22,
+    "timeStamp": 53735,
+    "label": "macbook"
+  },
+  {
+    "co2": 524,
+    "tvoc": 18,
+    "temp": 27.7,
+    "pressure": 96475.56,
+    "altitude": 411.73,
+    "humidity": 22,
+    "timeStamp": 54701,
+    "label": "macbook"
+  },
+  {
+    "co2": 524,
+    "tvoc": 18,
+    "temp": 27.7,
+    "pressure": 96476.36,
+    "altitude": 411.66,
+    "humidity": 22,
+    "timeStamp": 55716,
+    "label": "macbook"
+  },
+  {
+    "co2": 515,
+    "tvoc": 17,
+    "temp": 27.7,
+    "pressure": 96477.17,
+    "altitude": 411.59,
+    "humidity": 21,
+    "timeStamp": 56701,
+    "label": "macbook"
+  },
+  {
+    "co2": 546,
+    "tvoc": 22,
+    "temp": 27.8,
+    "pressure": 96478.82,
+    "altitude": 411.45,
+    "humidity": 22,
+    "timeStamp": 57718,
+    "label": "macbook"
+  },
+  {
+    "co2": 537,
+    "tvoc": 20,
+    "temp": 27.8,
+    "pressure": 96475.63,
+    "altitude": 411.73,
+    "humidity": 22,
+    "timeStamp": 58684,
+    "label": "macbook"
+  },
+  {
+    "co2": 574,
+    "tvoc": 26,
+    "temp": 27.9,
+    "pressure": 96476.45,
+    "altitude": 411.66,
+    "humidity": 22,
+    "timeStamp": 59699,
+    "label": "macbook"
+  },
+  {
+    "co2": 555,
+    "tvoc": 23,
+    "temp": 28,
+    "pressure": 96477.32,
+    "altitude": 411.58,
+    "humidity": 22,
+    "timeStamp": 60683,
+    "label": "macbook"
+  },
+  {
+    "co2": 588,
+    "tvoc": 28,
+    "temp": 28,
+    "pressure": 96475.05,
+    "altitude": 411.78,
+    "humidity": 22,
+    "timeStamp": 61651,
+    "label": "macbook"
+  },
+  {
+    "co2": 569,
+    "tvoc": 25,
+    "temp": 28.1,
+    "pressure": 96475.49,
+    "altitude": 411.74,
+    "humidity": 22,
+    "timeStamp": 62668,
+    "label": "macbook"
+  },
+  {
+    "co2": 545,
+    "tvoc": 22,
+    "temp": 28.1,
+    "pressure": 96474.2,
+    "altitude": 411.85,
+    "humidity": 21,
+    "timeStamp": 63635,
+    "label": "macbook"
+  },
+  {
+    "co2": 543,
+    "tvoc": 21,
+    "temp": 28.1,
+    "pressure": 96472.94,
+    "altitude": 411.96,
+    "humidity": 22,
+    "timeStamp": 64668,
+    "label": "macbook"
+  },
+  {
+    "co2": 517,
+    "tvoc": 17,
+    "temp": 28.1,
+    "pressure": 96475.14,
+    "altitude": 411.77,
+    "humidity": 22,
+    "timeStamp": 65634,
+    "label": "macbook"
+  },
+  {
+    "co2": 517,
+    "tvoc": 17,
+    "temp": 28.2,
+    "pressure": 96472.63,
+    "altitude": 411.99,
+    "humidity": 21,
+    "timeStamp": 66601,
+    "label": "macbook"
+  },
+  {
+    "co2": 527,
+    "tvoc": 19,
+    "temp": 28.3,
+    "pressure": 96470.66,
+    "altitude": 412.16,
+    "humidity": 21,
+    "timeStamp": 67619,
+    "label": "macbook"
+  },
+  {
+    "co2": 519,
+    "tvoc": 18,
+    "temp": 28.3,
+    "pressure": 96469.87,
+    "altitude": 412.23,
+    "humidity": 21,
+    "timeStamp": 68600,
+    "label": "macbook"
+  },
+  {
+    "co2": 520,
+    "tvoc": 18,
+    "temp": 28.3,
+    "pressure": 96471.28,
+    "altitude": 412.1,
+    "humidity": 21,
+    "timeStamp": 69617,
+    "label": "macbook"
+  },
+  {
+    "co2": 488,
+    "tvoc": 13,
+    "temp": 28.3,
+    "pressure": 96475.23,
+    "altitude": 411.76,
+    "humidity": 21,
+    "timeStamp": 70585,
+    "label": "macbook"
+  },
+  {
+    "co2": 498,
+    "tvoc": 14,
+    "temp": 28.4,
+    "pressure": 96479.89,
+    "altitude": 411.36,
+    "humidity": 21,
+    "timeStamp": 71602,
+    "label": "macbook"
+  }
+]

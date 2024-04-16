@@ -1,0 +1,742 @@
+[
+  {
+    "co2": 732,
+    "tvoc": 50,
+    "temp": 26.4,
+    "pressure": 98592.73,
+    "altitude": 229.94,
+    "humidity": 26,
+    "timeStamp": 18422,
+    "label": "desk"
+  },
+  {
+    "co2": 742,
+    "tvoc": 52,
+    "temp": 26.4,
+    "pressure": 98593.3,
+    "altitude": 229.92,
+    "humidity": 27,
+    "timeStamp": 18607,
+    "label": "desk"
+  },
+  {
+    "co2": 726,
+    "tvoc": 49,
+    "temp": 26.4,
+    "pressure": 98597.56,
+    "altitude": 229.55,
+    "humidity": 27,
+    "timeStamp": 19587,
+    "label": "desk"
+  },
+  {
+    "co2": 697,
+    "tvoc": 45,
+    "temp": 26.4,
+    "pressure": 98594.77,
+    "altitude": 229.79,
+    "humidity": 27,
+    "timeStamp": 20606,
+    "label": "desk"
+  },
+  {
+    "co2": 712,
+    "tvoc": 47,
+    "temp": 26.4,
+    "pressure": 98595.56,
+    "altitude": 229.72,
+    "humidity": 27,
+    "timeStamp": 21573,
+    "label": "desk"
+  },
+  {
+    "co2": 765,
+    "tvoc": 55,
+    "temp": 26.4,
+    "pressure": 98594.95,
+    "altitude": 229.76,
+    "humidity": 27,
+    "timeStamp": 22589,
+    "label": "desk"
+  },
+  {
+    "co2": 787,
+    "tvoc": 58,
+    "temp": 26.3,
+    "pressure": 98595.17,
+    "altitude": 229.76,
+    "humidity": 27,
+    "timeStamp": 23557,
+    "label": "desk"
+  },
+  {
+    "co2": 815,
+    "tvoc": 63,
+    "temp": 26.3,
+    "pressure": 98595.14,
+    "altitude": 229.76,
+    "humidity": 26,
+    "timeStamp": 24539,
+    "label": "desk"
+  },
+  {
+    "co2": 825,
+    "tvoc": 64,
+    "temp": 26.3,
+    "pressure": 98593.75,
+    "altitude": 229.88,
+    "humidity": 27,
+    "timeStamp": 25555,
+    "label": "desk"
+  },
+  {
+    "co2": 770,
+    "tvoc": 56,
+    "temp": 26.3,
+    "pressure": 98596.47,
+    "altitude": 229.65,
+    "humidity": 27,
+    "timeStamp": 26520,
+    "label": "desk"
+  },
+  {
+    "co2": 752,
+    "tvoc": 53,
+    "temp": 26.3,
+    "pressure": 98595.73,
+    "altitude": 229.71,
+    "humidity": 27,
+    "timeStamp": 27539,
+    "label": "desk"
+  },
+  {
+    "co2": 712,
+    "tvoc": 47,
+    "temp": 26.3,
+    "pressure": 98596.02,
+    "altitude": 229.68,
+    "humidity": 27,
+    "timeStamp": 28521,
+    "label": "desk"
+  },
+  {
+    "co2": 714,
+    "tvoc": 47,
+    "temp": 26.4,
+    "pressure": 98597.22,
+    "altitude": 229.58,
+    "humidity": 27,
+    "timeStamp": 29540,
+    "label": "desk"
+  },
+  {
+    "co2": 714,
+    "tvoc": 47,
+    "temp": 26.4,
+    "pressure": 98595.86,
+    "altitude": 229.7,
+    "humidity": 27,
+    "timeStamp": 30503,
+    "label": "desk"
+  },
+  {
+    "co2": 699,
+    "tvoc": 45,
+    "temp": 26.4,
+    "pressure": 98596.8,
+    "altitude": 229.62,
+    "humidity": 27,
+    "timeStamp": 31471,
+    "label": "desk"
+  },
+  {
+    "co2": 699,
+    "tvoc": 45,
+    "temp": 26.4,
+    "pressure": 98595.34,
+    "altitude": 229.74,
+    "humidity": 27,
+    "timeStamp": 32506,
+    "label": "desk"
+  },
+  {
+    "co2": 699,
+    "tvoc": 45,
+    "temp": 26.4,
+    "pressure": 98595.22,
+    "altitude": 229.75,
+    "humidity": 27,
+    "timeStamp": 33472,
+    "label": "desk"
+  },
+  {
+    "co2": 836,
+    "tvoc": 66,
+    "temp": 26.2,
+    "pressure": 98591.9,
+    "altitude": 230.03,
+    "humidity": 27,
+    "timeStamp": 50754,
+    "label": "3d printers"
+  },
+  {
+    "co2": 889,
+    "tvoc": 74,
+    "temp": 26.2,
+    "pressure": 98593.78,
+    "altitude": 229.87,
+    "humidity": 27,
+    "timeStamp": 51337,
+    "label": "3d printers"
+  },
+  {
+    "co2": 954,
+    "tvoc": 84,
+    "temp": 26.2,
+    "pressure": 98592.94,
+    "altitude": 229.95,
+    "humidity": 27,
+    "timeStamp": 52355,
+    "label": "3d printers"
+  },
+  {
+    "co2": 975,
+    "tvoc": 87,
+    "temp": 26.2,
+    "pressure": 98593.45,
+    "altitude": 229.9,
+    "humidity": 27,
+    "timeStamp": 53324,
+    "label": "3d printers"
+  },
+  {
+    "co2": 975,
+    "tvoc": 87,
+    "temp": 26.2,
+    "pressure": 98595.48,
+    "altitude": 229.73,
+    "humidity": 27,
+    "timeStamp": 54337,
+    "label": "3d printers"
+  },
+  {
+    "co2": 1019,
+    "tvoc": 94,
+    "temp": 26.2,
+    "pressure": 98600.7,
+    "altitude": 229.29,
+    "humidity": 27,
+    "timeStamp": 55322,
+    "label": "3d printers"
+  },
+  {
+    "co2": 1385,
+    "tvoc": 150,
+    "temp": 26.1,
+    "pressure": 98594.05,
+    "altitude": 229.82,
+    "humidity": 27,
+    "timeStamp": 56288,
+    "label": "3d printers"
+  },
+  {
+    "co2": 1629,
+    "tvoc": 272,
+    "temp": 26.1,
+    "pressure": 98595.13,
+    "altitude": 229.76,
+    "humidity": 27,
+    "timeStamp": 57304,
+    "label": "3d printers"
+  },
+  {
+    "co2": 2208,
+    "tvoc": 1161,
+    "temp": 26.1,
+    "pressure": 98597.3,
+    "altitude": 229.57,
+    "humidity": 27,
+    "timeStamp": 58271,
+    "label": "3d printers"
+  },
+  {
+    "co2": 2958,
+    "tvoc": 2762,
+    "temp": 26.1,
+    "pressure": 98595.45,
+    "altitude": 229.73,
+    "humidity": 27,
+    "timeStamp": 59288,
+    "label": "3d printers"
+  },
+  {
+    "co2": 2630,
+    "tvoc": 2066,
+    "temp": 26.1,
+    "pressure": 98596.48,
+    "altitude": 229.64,
+    "humidity": 27,
+    "timeStamp": 60271,
+    "label": "3d printers"
+  },
+  {
+    "co2": 2322,
+    "tvoc": 1404,
+    "temp": 26.1,
+    "pressure": 98597.84,
+    "altitude": 229.53,
+    "humidity": 27,
+    "timeStamp": 61288,
+    "label": "3d printers"
+  },
+  {
+    "co2": 2048,
+    "tvoc": 823,
+    "temp": 26.1,
+    "pressure": 98593.81,
+    "altitude": 229.87,
+    "humidity": 27,
+    "timeStamp": 62255,
+    "label": "3d printers"
+  },
+  {
+    "co2": 2104,
+    "tvoc": 928,
+    "temp": 26.1,
+    "pressure": 98594.88,
+    "altitude": 229.77,
+    "humidity": 27,
+    "timeStamp": 63222,
+    "label": "3d printers"
+  },
+  {
+    "co2": 1961,
+    "tvoc": 680,
+    "temp": 26.1,
+    "pressure": 98594.58,
+    "altitude": 229.81,
+    "humidity": 27,
+    "timeStamp": 64254,
+    "label": "3d printers"
+  },
+  {
+    "co2": 1875,
+    "tvoc": 548,
+    "temp": 26.2,
+    "pressure": 98600.13,
+    "altitude": 229.33,
+    "humidity": 27,
+    "timeStamp": 65221,
+    "label": "3d printers"
+  },
+  {
+    "co2": 1800,
+    "tvoc": 450,
+    "temp": 26.2,
+    "pressure": 98594.01,
+    "altitude": 229.86,
+    "humidity": 27,
+    "timeStamp": 66236,
+    "label": "3d printers"
+  },
+  {
+    "co2": 1729,
+    "tvoc": 366,
+    "temp": 26.2,
+    "pressure": 98592.91,
+    "altitude": 229.95,
+    "humidity": 27,
+    "timeStamp": 67205,
+    "label": "3d printers"
+  },
+  {
+    "co2": 1674,
+    "tvoc": 313,
+    "temp": 26.1,
+    "pressure": 98593.84,
+    "altitude": 229.87,
+    "humidity": 27,
+    "timeStamp": 68220,
+    "label": "3d printers"
+  },
+  {
+    "co2": 1629,
+    "tvoc": 272,
+    "temp": 26.1,
+    "pressure": 98595.91,
+    "altitude": 229.69,
+    "humidity": 27,
+    "timeStamp": 69204,
+    "label": "3d printers"
+  },
+  {
+    "co2": 1615,
+    "tvoc": 260,
+    "temp": 26.1,
+    "pressure": 98597.16,
+    "altitude": 229.59,
+    "humidity": 27,
+    "timeStamp": 70170,
+    "label": "3d printers"
+  },
+  {
+    "co2": 1607,
+    "tvoc": 253,
+    "temp": 26.1,
+    "pressure": 98596.75,
+    "altitude": 229.62,
+    "humidity": 27,
+    "timeStamp": 71187,
+    "label": "3d printers"
+  },
+  {
+    "co2": 1607,
+    "tvoc": 252,
+    "temp": 26.1,
+    "pressure": 98597.47,
+    "altitude": 229.55,
+    "humidity": 27,
+    "timeStamp": 72156,
+    "label": "3d printers"
+  },
+  {
+    "co2": 1501,
+    "tvoc": 172,
+    "temp": 25.8,
+    "pressure": 98600.3,
+    "altitude": 229.32,
+    "humidity": 28,
+    "timeStamp": 88204,
+    "label": "solder station"
+  },
+  {
+    "co2": 1496,
+    "tvoc": 169,
+    "temp": 25.8,
+    "pressure": 98598.92,
+    "altitude": 229.44,
+    "humidity": 28,
+    "timeStamp": 89054,
+    "label": "solder station"
+  },
+  {
+    "co2": 1496,
+    "tvoc": 169,
+    "temp": 25.8,
+    "pressure": 98597.81,
+    "altitude": 229.53,
+    "humidity": 28,
+    "timeStamp": 90021,
+    "label": "solder station"
+  },
+  {
+    "co2": 1501,
+    "tvoc": 172,
+    "temp": 25.8,
+    "pressure": 98600.42,
+    "altitude": 229.31,
+    "humidity": 27,
+    "timeStamp": 91054,
+    "label": "solder station"
+  },
+  {
+    "co2": 1505,
+    "tvoc": 175,
+    "temp": 25.8,
+    "pressure": 98598.77,
+    "altitude": 229.45,
+    "humidity": 28,
+    "timeStamp": 92019,
+    "label": "solder station"
+  },
+  {
+    "co2": 1482,
+    "tvoc": 164,
+    "temp": 25.8,
+    "pressure": 98600.22,
+    "altitude": 229.33,
+    "humidity": 27,
+    "timeStamp": 92985,
+    "label": "solder station"
+  },
+  {
+    "co2": 1495,
+    "tvoc": 166,
+    "temp": 25.8,
+    "pressure": 98599.07,
+    "altitude": 229.42,
+    "humidity": 28,
+    "timeStamp": 94003,
+    "label": "solder station"
+  },
+  {
+    "co2": 1495,
+    "tvoc": 166,
+    "temp": 25.8,
+    "pressure": 98599.63,
+    "altitude": 229.38,
+    "humidity": 28,
+    "timeStamp": 94970,
+    "label": "solder station"
+  },
+  {
+    "co2": 1429,
+    "tvoc": 156,
+    "temp": 25.8,
+    "pressure": 98599.77,
+    "altitude": 229.37,
+    "humidity": 28,
+    "timeStamp": 96003,
+    "label": "solder station"
+  },
+  {
+    "co2": 1441,
+    "tvoc": 158,
+    "temp": 25.8,
+    "pressure": 98601.06,
+    "altitude": 229.26,
+    "humidity": 27,
+    "timeStamp": 96971,
+    "label": "solder station"
+  },
+  {
+    "co2": 1441,
+    "tvoc": 158,
+    "temp": 25.8,
+    "pressure": 98601.16,
+    "altitude": 229.25,
+    "humidity": 28,
+    "timeStamp": 97988,
+    "label": "solder station"
+  },
+  {
+    "co2": 1478,
+    "tvoc": 164,
+    "temp": 25.8,
+    "pressure": 98602.08,
+    "altitude": 229.17,
+    "humidity": 28,
+    "timeStamp": 98954,
+    "label": "solder station"
+  },
+  {
+    "co2": 1495,
+    "tvoc": 166,
+    "temp": 25.8,
+    "pressure": 98597.98,
+    "altitude": 229.52,
+    "humidity": 28,
+    "timeStamp": 99987,
+    "label": "solder station"
+  },
+  {
+    "co2": 840,
+    "tvoc": 67,
+    "temp": 25.4,
+    "pressure": 98595.52,
+    "altitude": 229.73,
+    "humidity": 28,
+    "timeStamp": 114086,
+    "label": "workshop"
+  },
+  {
+    "co2": 765,
+    "tvoc": 55,
+    "temp": 25.4,
+    "pressure": 98597.58,
+    "altitude": 229.55,
+    "humidity": 28,
+    "timeStamp": 114836,
+    "label": "workshop"
+  },
+  {
+    "co2": 726,
+    "tvoc": 49,
+    "temp": 25.4,
+    "pressure": 98597.44,
+    "altitude": 229.56,
+    "humidity": 28,
+    "timeStamp": 115802,
+    "label": "workshop"
+  },
+  {
+    "co2": 671,
+    "tvoc": 41,
+    "temp": 25.4,
+    "pressure": 98599.27,
+    "altitude": 229.41,
+    "humidity": 28,
+    "timeStamp": 116819,
+    "label": "workshop"
+  },
+  {
+    "co2": 641,
+    "tvoc": 36,
+    "temp": 25.4,
+    "pressure": 98596.72,
+    "altitude": 229.61,
+    "humidity": 28,
+    "timeStamp": 117804,
+    "label": "workshop"
+  },
+  {
+    "co2": 612,
+    "tvoc": 32,
+    "temp": 25.4,
+    "pressure": 98598.75,
+    "altitude": 229.45,
+    "humidity": 28,
+    "timeStamp": 118817,
+    "label": "workshop"
+  },
+  {
+    "co2": 592,
+    "tvoc": 29,
+    "temp": 25.3,
+    "pressure": 98597.31,
+    "altitude": 229.57,
+    "humidity": 27,
+    "timeStamp": 119786,
+    "label": "workshop"
+  },
+  {
+    "co2": 594,
+    "tvoc": 29,
+    "temp": 25.3,
+    "pressure": 98598.42,
+    "altitude": 229.48,
+    "humidity": 28,
+    "timeStamp": 120803,
+    "label": "workshop"
+  },
+  {
+    "co2": 588,
+    "tvoc": 28,
+    "temp": 25.3,
+    "pressure": 98600.33,
+    "altitude": 229.32,
+    "humidity": 28,
+    "timeStamp": 121771,
+    "label": "workshop"
+  },
+  {
+    "co2": 566,
+    "tvoc": 25,
+    "temp": 25.3,
+    "pressure": 98598.66,
+    "altitude": 229.46,
+    "humidity": 28,
+    "timeStamp": 122804,
+    "label": "workshop"
+  },
+  {
+    "co2": 546,
+    "tvoc": 22,
+    "temp": 25.3,
+    "pressure": 98597.55,
+    "altitude": 229.55,
+    "humidity": 28,
+    "timeStamp": 123771,
+    "label": "workshop"
+  },
+  {
+    "co2": 542,
+    "tvoc": 21,
+    "temp": 25.3,
+    "pressure": 98596.16,
+    "altitude": 229.67,
+    "humidity": 28,
+    "timeStamp": 124736,
+    "label": "workshop"
+  },
+  {
+    "co2": 526,
+    "tvoc": 19,
+    "temp": 25.3,
+    "pressure": 98596.08,
+    "altitude": 229.68,
+    "humidity": 28,
+    "timeStamp": 125753,
+    "label": "workshop"
+  },
+  {
+    "co2": 526,
+    "tvoc": 19,
+    "temp": 25.2,
+    "pressure": 98598.48,
+    "altitude": 229.47,
+    "humidity": 28,
+    "timeStamp": 126737,
+    "label": "workshop"
+  },
+  {
+    "co2": 560,
+    "tvoc": 24,
+    "temp": 25.2,
+    "pressure": 98599,
+    "altitude": 229.43,
+    "humidity": 28,
+    "timeStamp": 127752,
+    "label": "workshop"
+  },
+  {
+    "co2": 553,
+    "tvoc": 23,
+    "temp": 25.2,
+    "pressure": 98599.41,
+    "altitude": 229.4,
+    "humidity": 28,
+    "timeStamp": 128721,
+    "label": "workshop"
+  },
+  {
+    "co2": 537,
+    "tvoc": 20,
+    "temp": 25.1,
+    "pressure": 98597.08,
+    "altitude": 229.59,
+    "humidity": 28,
+    "timeStamp": 129736,
+    "label": "workshop"
+  },
+  {
+    "co2": 537,
+    "tvoc": 20,
+    "temp": 25.1,
+    "pressure": 98593.83,
+    "altitude": 229.87,
+    "humidity": 28,
+    "timeStamp": 130718,
+    "label": "workshop"
+  },
+  {
+    "co2": 534,
+    "tvoc": 20,
+    "temp": 25.1,
+    "pressure": 98595.97,
+    "altitude": 229.67,
+    "humidity": 28,
+    "timeStamp": 131685,
+    "label": "workshop"
+  },
+  {
+    "co2": 537,
+    "tvoc": 20,
+    "temp": 25.1,
+    "pressure": 98594.63,
+    "altitude": 229.8,
+    "humidity": 28,
+    "timeStamp": 132705,
+    "label": "workshop"
+  },
+  {
+    "co2": 537,
+    "tvoc": 20,
+    "temp": 25,
+    "pressure": 98597.45,
+    "altitude": 229.56,
+    "humidity": 29,
+    "timeStamp": 133669,
+    "label": "workshop"
+  }
+]
