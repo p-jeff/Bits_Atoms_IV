@@ -10,6 +10,11 @@ const data = [
   { r: 0, g: 254, b: 0, color: 'green-ish' },
   { r: 0, g: 253, b: 0, color: 'green-ish' },
   { r: 0, g: 220, b: 0, color: 'green-ish' },
+  { r: 0, g: 255, b: 255, color: 'aqua' },
+  { r: 0, g: 250, b: 255, color: 'aqua' },
+  { r: 255, g: 250, b: 0, color: 'yellow' },
+  { r: 250, g: 245, b: 0, color: 'yellow' },
+  { r: 245, g: 250, b: 0, color: 'yellow' },
   { r: 0, g: 0, b: 255, color: 'blue-ish' },
   { r: 0, g: 0, b: 230, color: 'blue-ish' },
   { r: 0, g: 0, b: 254, color: 'blue-ish' },
@@ -27,6 +32,8 @@ const options = {
 
 // Step 3: initialize your neural network
 const nn = ml5.neuralNetwork(options);
+
+console.log(data);
 
 // Step 4: add data to the neural network
 data.forEach(item => {

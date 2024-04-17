@@ -14,10 +14,13 @@ function preload() {
   classifier = ml5.imageClassifier(modelURL + 'model.json');
 }
 
+let x = 0;
+let y = 0;
+
 function setup() {
   createCanvas(640, 480);
   textAlign(CENTER, CENTER);
-  fill(255,255,0);
+  fill(255, 255, 0);
   textSize(14);
   video = createCapture(VIDEO)
   video.size(video.width, video.height);
@@ -25,9 +28,9 @@ function setup() {
   cropedVideo = createGraphics(video.height, video.height)
   cropedVideo.background(0);
   classifyVideo();
+  x = width / 2;
+  y = height / 2;
 }
-
-
 
 function draw() {
   background(100);
@@ -45,35 +48,35 @@ function draw() {
 }
 
 
-function classifyVideo() {
-  let flippedVideo;
-  flippedVideo = ml5.flipImage(video)
-  try {
-    // crop the image to match the format of teachablemachine
-    let xOffest = (flippedVideo.width - flippedVideo.height) / 2;
-    cropedVideo.image(flippedVideo, -xOffest, 0, flippedVideo.width, flippedVideo.height);
-    // classify image
-    classifier.classify(cropedVideo, gotResults);
-  } catch (e) {
-    console.log(e);
-  }
-}
-
-function gotResults(error, results) {
-  if (error) {
-    console.error(error);
-    return;
-  }
-  // find classification with highest confidence
-  confidence = 0.0;
-  label = "none";
-  for (let i = 0; i < results.length; i++) {
-    let iconfidence = floor(results[i].confidence*100); // convert decimal to percentage with no decimal places
-    if (iconfidence > confidence) {
-      confidence = iconfidence
-      label = results[i].label;
+  function classifyVideo() {
+    let flippedVideo;
+    flippedVideo = ml5.flipImage(video)
+    try {
+      // crop the image to match the format of teachablemachine
+      let xOffest = (flippedVideo.width - flippedVideo.height) / 2;
+      cropedVideo.image(flippedVideo, -xOffest, 0, flippedVideo.width, flippedVideo.height);
+      // classify image
+      classifier.classify(cropedVideo, gotResults);
+    } catch (e) {
+      console.log(e);
     }
-
   }
-  classifyVideo();
-}
+
+  function gotResults(error, results) {
+    if (error) {
+      console.error(error);
+      return;
+    }
+    // find classification with highest confidence
+    confidence = 0.0;
+    label = "none";
+    for (let i = 0; i < results.length; i++) {
+      let iconfidence = floor(results[i].confidence * 100); // convert decimal to percentage with no decimal places
+      if (iconfidence > confidence) {
+        confidence = iconfidence
+        label = results[i].label;
+      }
+
+    }
+    classifyVideo();
+  }
