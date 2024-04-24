@@ -1,83 +1,16 @@
 let trainingFinished = false;
-// let nnResults;
+let nnResults;
+let nnResults2;
+let nnResults3;
 let predictResults;
 let sharedMousePos;
 let predictionNetwork;
+let yPredictionNetwork;
+let classificationNetwork;
+let colorResults;
 
-let sketch1 = function (p) {
-  let img;
-  p.preload = function () {
-    img = p.loadImage("spectrum.png");
-  };
+let trainingCounter = 0;
 
-  p.setup = function () {
-    p.createCanvas(800, 800);
-    predictionNetwork = ml5.neuralNetwork(predictionOptions);
-    addMyData();
-    predictionNetwork.normalizeData();
-    console.log(predictionNetwork);
-    predictionNetwork.train(trainingOptions, finishedTraining2);
-  };
-
-  p.draw = function () {
-    p.background(0);
-    p.image(img, 0, 0, p.width - 20, p.height - 20);
-    sharedMousePos = p.createVector(p.mouseX, p.mouseY);
-    classifyPixelColor(p);
-  };
-};
-
-let sketch2 = function (p) {
-  let img;
-  p.preload = function () {
-    img = p.loadImage("spectrum.png");
-  };
-
-  p.setup = function () {
-    p.createCanvas(800, 800);
-  };
-
-  p.draw = function () {
-    p.background(0);
-    p.image(img, 0, 0, p.width - 20, p.height - 20);
-    if (sharedMousePos) {
-      p.noFill();
-      p.stroke(255); // white circle
-      p.ellipse(sharedMousePos.x, sharedMousePos.y, 50, 50);
-    }
-  };
-};
-
-new p5(sketch1, "canvas1Container");
-new p5(sketch2, "canvas2Container");
-
-function classifyPixelColor(p) {
-  if (trainingFinished) {
-    // Get the color of a pixel.
-    let c = p.get(p.mouseX, p.mouseY);
-    // format the color
-    if (c) {
-      const input = {
-        r: c[0],
-        g: c[1],
-        b: c[2],
-      };
-      const input2 = {
-        red: 80,
-        yellow: 10,
-        green: 0,
-        blue: 0,
-        white: 0,
-        aqua: 0,
-      };
-      // classify(input);
-      classify2(input2);
-      // drawLabel(nnResults, input, p);
-    }
-  }
-}
-
-// Step 1: load data or create some data
 const data = [
   { r: 255, g: 0, b: 0, color: "red" },
   { r: 254, g: 0, b: 0, color: "red" },
@@ -102,13 +35,13 @@ const data = [
 const predictionData = [
   {
     red: 80,
-    yellow: 1,
+    yellow: 10,
     green: 0,
     blue: 0,
     white: 0,
     aqua: 0,
     x: 1,
-    y: 0,
+    y: 570,
   },
   {
     red: 78,
@@ -118,32 +51,151 @@ const predictionData = [
     white: 0,
     aqua: 0,
     x: 10,
-    y: 0,
+    y: 700,
   },
   {
     red: 0,
     yellow: 0,
-    green: 80,
-    blue: 0,
+    green: 1,
+    blue: 90,
     white: 0,
-    aqua: 1,
+    aqua: 4,
     x: 500,
-    y: 0,
+    y: 600,
   },
   {
     red: 0,
     yellow: 0,
-    green: 79,
-    blue: 0,
+    green: 1,
+    blue: 79,
     white: 0,
     aqua: 12,
     x: 490,
-    y: 0,
+    y: 400,
+  },
+  {
+    red: 1.01,
+    yellow: 15.37,
+    green: 0,
+    blue: 70.31,
+    white: 15.37,
+    aqua: 13.18,
+    x: 496,
+    y: 511,
+  },
+  {
+    white: 84.19,
+    yellow: 10.9,
+    green: 0,
+    blue: 0.3,
+    red: 1.91,
+    aqua: 2.6,
+    x: 145,
+    y: 166,
+  },
+  {
+    red: 95.92,
+    white: 2.36,
+    blue: 1.44,
+    yellow: 0.02,
+    aqua: 0,
+    green: 0,
+    x: 725,
+    y: 721,
+  },
+  {
+    white: 21,
+    red: 9,
+    green: 0,
+    blue: 70,
+    yellow: 0,
+    aqua: 1,
+    x: 591,
+    y: 593,
+  },
+  {
+    white: 93,
+    red: 3,
+    green: 0,
+    blue: 1,
+    yellow: 1,
+    aqua: 1,
+    x: 622,
+    y: 112,
+  },
+  {
+    white: 94,
+    red: 2,
+    green: 0,
+    blue: 1,
+    yellow: 3,
+    aqua: 1,
+    x: 63,
+    y: 41,
+  },
+  {
+    white: 74,
+    red: 2,
+    green: 2,
+    blue: 0,
+    yellow: 17,
+    aqua: 5,
+    x: 203,
+    y: 233,
+  },
+  {
+    white: 62,
+    red: 1,
+    green: 5,
+    blue: 0,
+    yellow: 22,
+    aqua: 9,
+    x: 233,
+    y: 302,
+  },
+  {
+    white: 40,
+    red: 1,
+    green: 18,
+    blue: 0,
+    yellow: 24,
+    aqua: 17,
+    x: 256,
+    y: 369,
+  },
+  {
+    white: 8,
+    red: 1,
+    green: 0,
+    blue: 83,
+    yellow: 0,
+    aqua: 9,
+    x: 500,
+    y: 592,
+  },
+  {
+    white: 12,
+    red: 4,
+    green: 1,
+    blue: 0,
+    yellow: 81,
+    aqua: 0,
+    x: 115,
+    y: 536,
+  },
+  {
+    white: 2,
+    red: 0,
+    green: 85,
+    blue: 0,
+    yellow: 9,
+    aqua: 4,
+    x: 240,
+    y: 697,
   },
 ];
 
-// Step 2: set your neural network options
-const options = {
+const classificationOptions = {
   task: "classification", // or 'regression'
   inputs: ["r", "g", "b"],
   outputs: ["color"],
@@ -155,104 +207,221 @@ const options = {
 const predictionOptions = {
   task: "regression", // or 'regression'
   inputs: ["red", "yellow", "green", "blue", "white", "aqua"],
-  outputs: ["x", "y"],
+  outputs: 1,
   debug: true,
   learningRate: 0.2,
   hiddenUnits: 16,
 };
 
-// Step 3: initialize your neural network
-// const nn = ml5.neuralNetwork(options);
-
-
-// Step 4: add data to the neural network
-// data.forEach((item) => {
-//   const inputs = {
-//     r: item.r,
-//     g: item.g,
-//     b: item.b,
-//   };
-//   const output = {
-//     color: item.color,
-//   };
-//   nn.addData(inputs, output);
-// });
-
-// Step 5: normalize your data;
-// nn.normalizeData();
-
-// Step 6: train your neural network
 const trainingOptions = {
-  epochs: 160,
+  epochs: 80,
   batchSize: 12,
 };
 
-let trainingCounter = 1;
+//  Initialize the Skecthes
+let sketch1 = function (p) {
+  let img;
+  p.preload = function () {
+    img = p.loadImage("spectrum.png");
+  };
 
-//nn.train(trainingOptions, finishedTraining);
+  p.setup = function () {
+    p.createCanvas(800, 800);
+    predictionNetwork = ml5.neuralNetwork(predictionOptions);
+    yPredictionNetwork = ml5.neuralNetwork(predictionOptions);
+    classificationNetwork = ml5.neuralNetwork(classificationOptions);
 
-// Step 7: use the trained model
-// function finishedTraining() {
-//   console.log("finished training 1");
-//   trainingCounter++;
-//   if (trainingCounter >= 2) {
-//     trainingFinished = true;
-//   }
-// }
+    addMyData("x", predictionNetwork);
+    addMyData("y", yPredictionNetwork);
+    addClassificationData();
 
-function finishedTraining2() {
-  console.log("finished training 2");
+    classificationNetwork.normalizeData();
+    predictionNetwork.normalizeData();
+    yPredictionNetwork.normalizeData();
+
+    trainNetworks();
+  };
+
+  p.draw = function () {
+    p.background(0);
+    p.image(img, 0, 0, p.width - 20, p.height - 20);
+    sharedMousePos = p.createVector(p.mouseX, p.mouseY);
+
+    classifyPixelColor(p);
+
+    if (trainingFinished) {
+      drawLabel(nnResults, p);
+    }
+  };
+};
+
+let sketch2 = function (p) {
+  let img;
+  p.preload = function () {
+    img = p.loadImage("spectrum.png");
+  };
+
+  p.setup = function () {
+    p.createCanvas(800, 800);
+  };
+
+  p.draw = function () {
+    p.background(0);
+    p.image(img, 0, 0, p.width - 20, p.height - 20);
+    if (nnResults2 && nnResults3) {
+      p.noFill();
+      p.stroke(0); // white circle
+      p.strokeWeight(4);
+      p.ellipse(nnResults2[0].value, nnResults3[0].value, 50, 50);
+    }
+  };
+};
+
+new p5(sketch1, "canvas1Container");
+new p5(sketch2, "canvas2Container");
+
+function classifyPixelColor(p) {
+  if (trainingFinished) {
+    // Get the color of a pixel.
+    let c = p.get(p.mouseX, p.mouseY);
+    // format the color
+    if (c) {
+      const input = {
+        r: c[0],
+        g: c[1],
+        b: c[2],
+      };
+      classify(input);
+    }
+  }
+}
+
+function addClassificationData() {
+  data.forEach((item) => {
+    const inputs = {
+      r: item.r,
+      g: item.g,
+      b: item.b,
+    };
+    const output = {
+      color: item.color,
+    };
+    classificationNetwork.addData(inputs, output);
+  });
+}
+
+function trainNetworks() {
+  predictionNetwork.train(trainingOptions, function () {
+    finishedTraining();
+
+    yPredictionNetwork.train(trainingOptions, function () {
+      classificationNetwork.train(trainingOptions, finishedTraining);
+      finishedTraining();
+    });
+  });
+}
+
+function finishedTraining() {
   trainingCounter++;
 
-  if (trainingCounter >= 2) {
+  if (trainingCounter >= 3) {
     trainingFinished = true;
   }
 }
 
-// Step 8: make a classification
-// function classify(input) {
-//   nn.classify(input, handleResults);
-// }
+function classify(input) {
+  classificationNetwork.classify(input, callbackClassification);
+}
 
-function classify2(input) {
-  predictionNetwork.predict(input, handleResults2);
+function predict(input) {
+  yPredictionNetwork.predict(input, callbackY);
 }
 
 // Step 9: define a function to handle the results of your classification
-// function handleResults(error, result) {
-//   if (error) {
-//     console.error(error);
-//     return;
-//   }
-//   nnResults = result;
-//   //console.log(result); // {label: 'red', confidence: 0.8};
-// }
+function callbackClassification(error, result) {
+  if (error) {
+    console.error(error);
+    return;
+  }
+  nnResults = result;
 
-function handleResults2(error, result) {
+  if (result) {
+    const temp = {};
+    for (let item of result) {
+      temp[item.label] = Math.round(item.confidence * 100);
+    }
+
+    colorResults = temp;
+    //logColorAndMousePosition();
+
+    predictionNetwork.predict(temp, callbackX);
+    yPredictionNetwork.predict(temp, callbackY);
+  }
+}
+
+function callbackX(error, result) {
   if (error) {
     console.error(error);
     return;
   }
   if (result) {
     nnResults2 = result;
-    console.log(result);
-  } else {
-    console.error("Result is undefined or null");
-  }
-}
-function drawLabel(result, input, p, c) {
-  if (result) {
-    let offset = -150;
-    for (val of result) {
-      p.text(val.label + " :" + val.confidence, 10, p.height + offset);
-      offset += 15;
-    }
-    p.text(input.r + " " + input.g + " " + input.b, 10, p.height + offset);
-    p.text(p.mouseX + " " + p.mouseY, 10, p.height + offset + 15);
   }
 }
 
-function addMyData(){
+function callbackY(error, result) {
+  if (error) {
+    console.error(error);
+    return;
+  }
+  if (result) {
+    nnResults3 = result;
+  }
+}
+
+function drawLabel(result, p) {
+  if (result) {
+    let offset = -200;
+    for (let i = 0; i < result.length; i++) {
+      const val = result[i];
+      p.text(val.label + " :" + val.confidence, 10, p.height + offset);
+      offset += 15;
+    }
+    //p.text(input.r + " " + input.g + " " + input.b, 10, p.height + offset);
+    p.text(p.mouseX + " " + p.mouseY, 10, p.height + offset + 15);
+
+    if (nnResults2) {
+      p.text(
+        "X prediction: " + nnResults2[0].value,
+        10,
+        p.height + offset + 30
+      );
+    }
+    if (nnResults3) {
+      p.text(
+        "Y prediction: " + nnResults3[0].value,
+        10,
+        p.height + offset + 45
+      );
+    }
+  }
+}
+
+function logColorAndMousePosition() {
+  const output = {
+    white: colorResults.white,
+    red: colorResults.red,
+    green: colorResults.green,
+    blue: colorResults.blue,
+    yellow: colorResults.yellow,
+    aqua: colorResults.aqua,
+    x: sharedMousePos.x,
+    y: sharedMousePos.y,
+  };
+  console.log(output);
+}
+
+function addMyData(axis, network) {
   predictionData.forEach((entry) => {
     const inputData = {
       red: entry.red,
@@ -262,13 +431,17 @@ function addMyData(){
       white: entry.white,
       aqua: entry.aqua,
     };
-  
-    const outputData = {
-      x: entry.x,
-    };
-  
-  
-      predictionNetwork.addData(inputData, outputData);
-   
+
+    if (axis === "x") {
+      const outputData = {
+        x: entry.x,
+      };
+      network.addData(inputData, outputData);
+    } else if (axis === "y") {
+      const outputData = {
+        y: entry.y,
+      };
+      network.addData(inputData, outputData);
+    }
   });
 }
