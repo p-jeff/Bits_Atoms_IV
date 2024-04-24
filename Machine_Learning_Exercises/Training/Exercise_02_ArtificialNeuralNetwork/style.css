@@ -3,6 +3,7 @@ html, body {
   background-color: black;
 }
 
+
 body {
   margin: 0;
   display: flex;
@@ -12,4 +13,9 @@ body {
 
   /* This centers our sketch vertically. */
   align-items: center;
+  cursor: pointer;
+}
+
+body.loading {
+  cursor: progress;
 }
