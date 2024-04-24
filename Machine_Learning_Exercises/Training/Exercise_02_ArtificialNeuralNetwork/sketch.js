@@ -1,20 +1,15 @@
-let trainingFinished = false;
-let nnResults;
-let nnResults2;
-let nnResults3;
-let predictResults;
-let sharedMousePos;
-let predictionNetwork;
-let yPredictionNetwork;
-let classificationNetwork;
-let colorResults;
-let secondTrainingStarted = false;
-let trainButton;
+let nnResults, nnResults2, nnResults3;
+let predictionNetwork, yPredictionNetwork, classificationNetwork;
 
+let sharedMousePos;
+let colorResults;
+let trainButton;
+let secondTrainingStarted = false;
+
+//Data for the prediction networks, gets added by the user later
 let customData = [];
 
-let trainingCounter = 0;
-
+// Data for the color classification network
 const data = [
   { r: 255, g: 0, b: 0, color: "red" },
   { r: 254, g: 0, b: 0, color: "red" },
@@ -35,168 +30,6 @@ const data = [
   { r: 254, g: 254, b: 254, color: "white" },
   { r: 253, g: 253, b: 253, color: "white" },
 ];
-const predictionData = [
-  {
-    red: 80,
-    yellow: 10,
-    green: 0,
-    blue: 0,
-    white: 0,
-    aqua: 0,
-    x: 1,
-    y: 570,
-  },
-  {
-    red: 78,
-    yellow: 12,
-    green: 0,
-    blue: 0,
-    white: 0,
-    aqua: 0,
-    x: 10,
-    y: 700,
-  },
-  {
-    red: 0,
-    yellow: 0,
-    green: 1,
-    blue: 90,
-    white: 0,
-    aqua: 4,
-    x: 500,
-    y: 600,
-  },
-  {
-    red: 0,
-    yellow: 0,
-    green: 1,
-    blue: 79,
-    white: 0,
-    aqua: 12,
-    x: 490,
-    y: 400,
-  },
-  {
-    red: 1.01,
-    yellow: 15.37,
-    green: 0,
-    blue: 70.31,
-    white: 15.37,
-    aqua: 13.18,
-    x: 496,
-    y: 511,
-  },
-  {
-    white: 84.19,
-    yellow: 10.9,
-    green: 0,
-    blue: 0.3,
-    red: 1.91,
-    aqua: 2.6,
-    x: 145,
-    y: 166,
-  },
-  {
-    red: 95.92,
-    white: 2.36,
-    blue: 1.44,
-    yellow: 0.02,
-    aqua: 0,
-    green: 0,
-    x: 725,
-    y: 721,
-  },
-  {
-    white: 21,
-    red: 9,
-    green: 0,
-    blue: 70,
-    yellow: 0,
-    aqua: 1,
-    x: 591,
-    y: 593,
-  },
-  {
-    white: 93,
-    red: 3,
-    green: 0,
-    blue: 1,
-    yellow: 1,
-    aqua: 1,
-    x: 622,
-    y: 112,
-  },
-  {
-    white: 94,
-    red: 2,
-    green: 0,
-    blue: 1,
-    yellow: 3,
-    aqua: 1,
-    x: 63,
-    y: 41,
-  },
-  {
-    white: 74,
-    red: 2,
-    green: 2,
-    blue: 0,
-    yellow: 17,
-    aqua: 5,
-    x: 203,
-    y: 233,
-  },
-  {
-    white: 62,
-    red: 1,
-    green: 5,
-    blue: 0,
-    yellow: 22,
-    aqua: 9,
-    x: 233,
-    y: 302,
-  },
-  {
-    white: 40,
-    red: 1,
-    green: 18,
-    blue: 0,
-    yellow: 24,
-    aqua: 17,
-    x: 256,
-    y: 369,
-  },
-  {
-    white: 8,
-    red: 1,
-    green: 0,
-    blue: 83,
-    yellow: 0,
-    aqua: 9,
-    x: 500,
-    y: 592,
-  },
-  {
-    white: 12,
-    red: 4,
-    green: 1,
-    blue: 0,
-    yellow: 81,
-    aqua: 0,
-    x: 115,
-    y: 536,
-  },
-  {
-    white: 2,
-    red: 0,
-    green: 85,
-    blue: 0,
-    yellow: 9,
-    aqua: 4,
-    x: 240,
-    y: 697,
-  },
-];
 
 const classificationOptions = {
   task: "classification", // or 'regression'
@@ -208,7 +41,7 @@ const classificationOptions = {
 };
 
 const predictionOptions = {
-  task: "regression", // or 'regression'
+  task: "regression",
   inputs: ["red", "yellow", "green", "blue", "white", "aqua"],
   outputs: 1,
   debug: true,
@@ -230,25 +63,19 @@ let sketch1 = function (p) {
 
   p.setup = function () {
     p.createCanvas(800, 800);
-    predictionNetwork = ml5.neuralNetwork(predictionOptions);
-    yPredictionNetwork = ml5.neuralNetwork(predictionOptions);
-    classificationNetwork = ml5.neuralNetwork(classificationOptions);
-
     trainButton = p.createButton("Train Networks");
     trainButton.mousePressed(trainPredictionNetworks);
     trainButton.position(20, 60);
 
-    // addMyData("x", predictionNetwork);
-    // addMyData("y", yPredictionNetwork);
+    // Initialize the neural networks
+    predictionNetwork = ml5.neuralNetwork(predictionOptions);
+    yPredictionNetwork = ml5.neuralNetwork(predictionOptions);
+    classificationNetwork = ml5.neuralNetwork(classificationOptions);
+
+    //Auto start the classification network training
     addClassificationData();
-
     classificationNetwork.normalizeData();
-    // predictionNetwork.normalizeData();
-    // yPredictionNetwork.normalizeData();
-
     classificationNetwork.train(trainingOptions, finishedTraining);
-
-    // trainNetworks();
   };
 
   p.draw = function () {
@@ -257,6 +84,7 @@ let sketch1 = function (p) {
 
     sharedMousePos = p.createVector(p.mouseX, p.mouseY);
 
+    // While the Prediction networks are not trained, the user can add data by clicking on the canvas
     if (classificationNetwork.neuralNetwork.isTrained) {
       p.mouseClicked = function () {
         customData.push({
@@ -272,15 +100,13 @@ let sketch1 = function (p) {
         console.log(customData);
       };
       if (!secondTrainingStarted) {
-
         customData.forEach((data) => {
           p.noFill();
           p.ellipse(data.x, data.y, 10, 10);
         });
       }
     }
-
-    classifyPixelColor(p);
+    classifyPixelColor(p); // This gets the color of the pixel under the mouse, and then runs it through the classification network to get color predictions
 
     p.fill(0);
     drawLabel(nnResults, p);
@@ -298,7 +124,6 @@ let sketch2 = function (p) {
   };
 
   p.draw = function () {
-
     p.background(0);
     p.image(img, 0, 0, p.width - 20, p.height - 20);
     if (nnResults2 && nnResults3) {
@@ -310,10 +135,24 @@ let sketch2 = function (p) {
 
     p.fill(0);
     p.strokeWeight(0.25);
-    p.text('Classification Network is trained: ' + classificationNetwork.neuralNetwork.isTrained, 10, 30);
-    p.text('X Prediction Network is trained: ' + predictionNetwork.neuralNetwork.isTrained, 10, 60);
-    p.text('Y Prediction Network is trained: ' + yPredictionNetwork.neuralNetwork.isTrained, 10, 90);
-
+    p.text(
+      "Classification Network is trained: " +
+        classificationNetwork.neuralNetwork.isTrained,
+      10,
+      30
+    );
+    p.text(
+      "X Prediction Network is trained: " +
+        predictionNetwork.neuralNetwork.isTrained,
+      10,
+      60
+    );
+    p.text(
+      "Y Prediction Network is trained: " +
+        yPredictionNetwork.neuralNetwork.isTrained,
+      10,
+      90
+    );
   };
 };
 
@@ -350,109 +189,7 @@ function addClassificationData() {
   });
 }
 
-function finishedTraining() {
-  console.log(
-    "classification: " + classificationNetwork.neuralNetwork.isTrained
-  );
-  console.log("x prediction: " + predictionNetwork.neuralNetwork.isTrained);
-  console.log("y prediction: " + yPredictionNetwork.neuralNetwork.isTrained);
-
-  if (
-    classificationNetwork.neuralNetwork.isTrained &&
-    predictionNetwork.neuralNetwork.isTrained &&
-    yPredictionNetwork.neuralNetwork.isTrained
-  ) {
-    document.body.classList.remove("loading");
-  }
-}
-
-function callbackClassification(error, result) {
-  if (error) {
-    console.error(error);
-    return;
-  }
-  nnResults = result;
-
-  if (result) {
-    const temp = {};
-    for (let item of result) {
-      temp[item.label] = Math.round(item.confidence * 100);
-    }
-    colorResults = temp;
-    //logColorAndMousePosition();
-    if (
-      predictionNetwork.neuralNetwork.isTrained &&
-      yPredictionNetwork.neuralNetwork.isTrained
-    ) {
-      predictionNetwork.predict(temp, callbackX);
-      yPredictionNetwork.predict(temp, callbackY);
-    }
-  }
-}
-
-function callbackX(error, result) {
-  if (error) {
-    console.error(error);
-    return;
-  }
-  if (result) {
-    nnResults2 = result;
-  }
-}
-
-function callbackY(error, result) {
-  if (error) {
-    console.error(error);
-    return;
-  }
-  if (result) {
-    nnResults3 = result;
-  }
-}
-
-function drawLabel(result, p) {
-  if (result) {
-    let offset = -200;
-    for (let i = 0; i < result.length; i++) {
-      const val = result[i];
-      p.text(val.label + " :" + val.confidence, 10, p.height + offset);
-      offset += 15;
-    }
-    //p.text(input.r + " " + input.g + " " + input.b, 10, p.height + offset);
-    p.text(p.mouseX + " " + p.mouseY, 10, p.height + offset + 15);
-
-    if (nnResults2) {
-      p.text(
-        "X prediction: " + nnResults2[0].value,
-        10,
-        p.height + offset + 30
-      );
-    }
-    if (nnResults3) {
-      p.text(
-        "Y prediction: " + nnResults3[0].value,
-        10,
-        p.height + offset + 45
-      );
-    }
-  }
-}
-
-function logColorAndMousePosition() {
-  const output = {
-    white: colorResults.white,
-    red: colorResults.red,
-    green: colorResults.green,
-    blue: colorResults.blue,
-    yellow: colorResults.yellow,
-    aqua: colorResults.aqua,
-    x: sharedMousePos.x,
-    y: sharedMousePos.y,
-  };
-  console.log(output);
-}
-
-function addMyData(axis, network, data) {
+function addPredictionData(axis, network, data) {
   data.forEach((entry) => {
     const inputData = {
       red: entry.red,
@@ -488,8 +225,8 @@ function trainPredictionNetworks() {
     document.body.classList.add("loading");
 
     console.log("Starting to Train");
-    addMyData("x", predictionNetwork, customData);
-    addMyData("y", yPredictionNetwork, customData);
+    addPredictionData("x", predictionNetwork, customData);
+    addPredictionData("y", yPredictionNetwork, customData);
 
     predictionNetwork.normalizeData();
     yPredictionNetwork.normalizeData();
@@ -500,3 +237,91 @@ function trainPredictionNetworks() {
     );
   }
 }
+
+// this is just a callback for the training, when the last network is trained, the loading screen is removed
+function finishedTraining(error) {
+  if (error) {
+    console.error(error);
+    return;
+  }
+  if (
+    classificationNetwork.neuralNetwork.isTrained &&
+    predictionNetwork.neuralNetwork.isTrained &&
+    yPredictionNetwork.neuralNetwork.isTrained
+  ) {
+    document.body.classList.remove("loading");
+  }
+}
+
+function callbackClassification(error, result) {
+  if (error) {
+    console.error(error);
+    return;
+  }
+
+  nnResults = result;
+
+  // Formats the result to the data format of the prediction networks (from 0-1 to 0-100)
+  if (result) {
+    const temp = {};
+    for (let item of result) {
+      temp[item.label] = Math.round(item.confidence * 100);
+    }
+    colorResults = temp;
+    if (
+      predictionNetwork.neuralNetwork.isTrained &&
+      yPredictionNetwork.neuralNetwork.isTrained
+    ) {
+      predictionNetwork.predict(temp, callbackX);
+      yPredictionNetwork.predict(temp, callbackY);
+    }
+  }
+}
+
+function callbackX(error, result) {
+  if (error) {
+    console.error(error);
+    return;
+  }
+  if (result) {
+    nnResults2 = result;
+  }
+}
+
+function callbackY(error, result) {
+  if (error) {
+    console.error(error);
+    return;
+  }
+  if (result) {
+    nnResults3 = result;
+  }
+}
+
+// Draw the label
+function drawLabel(result, p) {
+  if (result) {
+    let offset = -125;
+    for (let i = 0; i < result.length; i++) {
+      const val = result[i];
+      p.text(val.label + " :" + val.confidence, 10, p.height + offset);
+      offset += 15;
+    }
+    if (nnResults2) {
+      p.text(
+        "X prediction: " + nnResults2[0].value,
+        10,
+        p.height + offset 
+      );
+    }
+    if (nnResults3) {
+      p.text(
+        "Y prediction: " + nnResults3[0].value,
+        10,
+        p.height + offset + 15
+      );
+    }
+  }
+}
+
+
